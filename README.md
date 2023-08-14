@@ -1,8 +1,8 @@
-from pyrogram import filters
+from pyrogram import Client, filters, types
 from config import prefix
 import asyncio
 
-@app.on_message(filters.command("чел", prefixes=prefix) & filters.me)
+@Client.on_message(filters.command("чел", prefixes=prefix) & filters.me)
 async def function_name(client, message):
     await message.edit("чел")
     await asyncio.sleep(2)
